@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+.container{
+    width: 80%; /* Adjust as needed */
+    max-height: 659px;
+    min-width: 200px;
+    max-width: 1096px; /* Optional for responsive design */
+    padding: 20px;
+    background: rgba(161, 194, 136, 0.71); /* Glass effect */
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    
+    position: absolute; /* Enable centering */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    
+    color: #134611;
+    text-align: center;
+}
+p{
+    font-family: Fredoka;
+    font-weight: 500;
+    font-size: 32px;
+
+}
