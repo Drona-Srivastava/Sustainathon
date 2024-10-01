@@ -1,34 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
 .root{
-  --font:"Fredoka";
   --primary:#107D07;
 
 }
 
 body{
   background-image: url(https://s3-alpha-sig.figma.com/img/3eb2/671a/2e9dc248e54f8b71b366dddf20fbe136?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=a67gxtMagbunVGk7F-WpFcE7bnrVB-VBQm9zz6rhl9rvJchAOI0Clk5cmVtCDDmIGK8FkSbQA52rG~VBpsJ~5MUA3JEmQGgHqZzJD~SWc9algPzEgyx4J3cF5ukmgBQ2xZhETI1hfVDUMlYFNgYI4TYARtt3iKNTjB84BUwQGprgbmq19fLsWcVzwqvWXRHkxIUwey6p~uNXNUgqmq1Lh17c7-sA8lOHocQPavd~bJeOUGf8HZtpZfFRhz47HmYwPZbACu-tUznmC9zla0SaYC1n4UrQc7WKPw9VyVM-hk03Gdg7~tLlWrnTO-VKJo0pTRfj~v5jBG5SPxgJtO29QQ__);
-  width: 1440px;
-  height: 1024px;
-  top: -470px;
-  left: -733px;
+  width: 100vw;
+  height:120vh;
   gap: 0px;
   opacity: 0px;
+  display:flex;
+  flex-direction: column;
 }
 
-header{
-  height:117px;
-  width:1510px;
+.nav-bar{
+  height:15vh;
+  width:100vw;
   display:flex;
   flex-direction: row;
   justify-content: end;
   backdrop-filter: blur(10px);
   box-shadow: 0px 10px 8px #00000040;
-  position:relative;
 }
 
-header>button{
-  position: inherit;
+.nav-logo{
+  height:60px;
+  width:100px;
+  background-color: #fff;
+  position:fixed;
+  left:30px;
+  top:30px;
+}
+
+.nav-button{
   color:#107D07; 
   font-family: "Fredoka", system-ui;
   font-weight: 541;
@@ -39,8 +45,63 @@ header>button{
   background-color: transparent;
 }
 
-header>button:hover
+.nav-button:hover
 {
   font-size: 29px;
   color:#000;
+}
+
+.home-sym{
+  height:70vh;
+  width:100vw;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home-word {
+  height: 23vh;
+  width: 70vw;
+  padding: 30px;
+  border: 2px solid grey;
+  border-radius: 20px;
+  background-color: transparent;
+  backdrop-filter: blur(8px);
+  position: relative;
+}
+
+.home-main-word{
+  position: absolute;
+  font-family: "Fredoka", system-ui;
+  font-weight: 600;
+  font-size: 85px; 
+}
+
+.home-main-word:not(.invert){
+  position: absolute;
+  top:-20%;
+  left:5%;
+  text-shadow: 
+  -2px -2px 0 #fff,
+  2px -2px 0 #fff,
+  -2px 2px 0 #fff,
+  2px 2px 0 #fff,
+  0 -3px 0 #fff,
+  0 3px 0 #fff,
+  -3px 0 0 #fff,
+  3px 0 0 #fff;
+  display: inline-block;
+}
+
+.invert {
+  top:45%;
+  left:5%;
+  display: inline-block;
+  transform: rotateX(180deg);
+  background: linear-gradient(180deg, rgba(102, 102, 102, 0.26) 0.01%, rgba(53, 53, 53, 0.54) 48.5%, rgba(0, 0, 0, 0.7) 100%);
+  -webkit-background-clip: text;  
+  background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  color: transparent; 
 }

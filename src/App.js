@@ -1,10 +1,13 @@
 
 import './App.css';
-import Header from './components/Header';
+import NavBar from './components/Header';
+import HomeSym from './components/homesym';
+
 function App() {
   return (
     <body className="body">
-      <Header></Header>
+      <NavBar></NavBar>
+      <HomeSym></HomeSym>
     </body>
   );
 }
