@@ -1,0 +1,109 @@
+body{
+    background: linear-gradient(180deg, #43755A 0%, #1FB966 100%);
+    background-size: cover; 
+    height: 100vh;
+}
+.chat-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 50px;
+  }
+  .chat-container2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 50px;
+  }
+  
+  .profile-picture img {
+    border-radius: 50%; 
+    border: 5px solid #4ade80;  /* Green border */
+    width: 189px;
+  height: 175px;
+  top: 186px;
+  left: 174px;
+  gap: 0px;
+  border: 5px 0px 0px 0px;
+  opacity: 0px;
+    margin-top: 10px;
+    margin-left: 100px;
+    
+  }
+  .profile-picture2 img {
+    border-radius: 50%; 
+    border: 5px solid #4ade80;  /* Green border */
+    width: 189px;
+  height: 175px;
+  top: 186px;
+  left: 174px;
+  gap: 0px;
+  border: 5px 0px 0px 0px;
+  opacity: 0px;
+    margin-right: 100px;
+    
+  }
+  
+  /* Arrow styling using pseudo-elements */
+  .arrow {
+    position: relative;
+    width: 182px;
+    height: 1px;
+    background-color: #fff;
+    flex-grow: 0.5;
+  }
+  
+  .arrow::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+  }
+ .arrow2 {
+    position: relative;
+    width: 182px;
+    height: 1px;
+    background-color: #fff;
+    margin-left: 10px;
+    margin-right: 0px;
+    flex-grow: 0.5;
+  }
+  
+  .arrow2::after {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Chat bubble styling */
+  .chat-bubble {
+    background: linear-gradient(135deg, rgba(72, 187, 120, 0.9), rgba(72, 187, 120, 0.7));
+    height: 136px;
+  top: 203px;
+  left: 545px;
+  gap: 0px;
+  border-radius: 40px;
+  border: 7px 0px 0px 0px;
+  opacity: 0px;
+  border: 7px solid #FFFFFF;
+    color: white;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    width: 630px;
+
+
+  }
