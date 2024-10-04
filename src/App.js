@@ -1,24 +1,17 @@
-import logo from './logo.svg';
+
 import './App.css';
+import NavBar from './components/Header';
+import HomeSym from './components/homesym';
+import Countdown from './components/countdown';
 
 function App() {
+  const target = new Date(2024,12,11);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <body className="body">
+      <NavBar></NavBar>
+      <HomeSym></HomeSym>
+      <Countdown targetDate={target}></Countdown>
+    </body>
   );
 }
 
