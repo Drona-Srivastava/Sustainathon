@@ -1,207 +1,102 @@
-  @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
-
-.root{
-  --primary:#107D07;
-}
-
-body{
-  margin:0;
-  padding:0;
-  height:100%;
-  width:100%;
-}
-
-.base{ 
-  margin:0;
-  padding:0;
-  height:300vh;
-  width:100vw;
-  box-sizing:border-box;  
-  background-image: url("https://s3-alpha-sig.figma.com/img/3eb2/671a/2e9dc248e54f8b71b366dddf20fbe136?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kjnGxQHu8EELIv96SxzwduwKFkRu00Vy1-Nc-DJ1PO44P9KMHr-6gw6PnFf6YUJ86iIDSem5Rrr0B086uIppoHca8FMah5RytWufhDyUeYKS6jLtkFvt42QbFgHxDNqBRdMCDX0OufM2LkKFfYeT2rdWRqAfKVbhPqLLlo7YQTi15ppvSKHrPAmFISlsdIYAPCvj9hoL67YkHZ3SDi-Nu6p-xZavjiWI0OpyrVTPI~WO07Qj~LK5g2-GarddLKNWyZVydRGstemUmV2VjWDOqyV-QMH-pB~jQ0PqUZwWzBRbVIkcgTo3DgvTQLiABTBommWGEIZWlhSUfDy72cM3Zw__");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position:fixed;
-  z-index:-1000;
-}
-
-/*----------------------------------------Home Page CSS stlying----------------------------------------------------*/
-.body{
-  width: 100vw;
-  height:100vh;
-  gap: 0px;
-  opacity: 0px;
-  position:relative;
-}
-
-.nav-bar{
-  position:fixed;
-  top:0;
-  height:15vh;
-  width:100vw;
-  display:flex;
-  flex-direction: row;
-  justify-content: end;
-  backdrop-filter: blur(12px);
-  box-shadow: 0px 10px 8px #00000040;
-  z-index:10;
-}
-
-.nav-logo{
-  width:4.5vw;
-  aspect-ratio: 1;
-  left:20px;
-  position: fixed;
-}
-
-.nav-button{
-  color:#107D07; 
-  font-family: "Fredoka", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 541;
-  font-style: normal;
-  font-variation-settings:"wdth" 103.8;
-  font-size:27px;
-  margin:20px;
-  border:none;
-  background-color: transparent;
-}
-
-.nav-button:hover{
-  font-size: 27px;
-  color:#000;
-}
-
-.nav-button.active {
-  color: black; 
-}
-
-.ham{
-  display:none;
-}
-
-.home{
-  position:absolute;
-  top:35%;
-  left:50%;
-  transform: translate(-50%,-30%);
-  height:70vh;
-  width:100vw;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.home-word {
-  flex:none;
-  height: 23vh;
-  width: 70vw;
-  padding: 20px;
-  border: 2px solid grey;
-  border-radius: 20px;
-  background-color: transparent;
-  backdrop-filter: blur(9px);
-  position: relative;
-}
-
-.home-main-word{
-  position: absolute;
-  top:10%;
-  left:8%;
-  font-family: "Fredoka", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 541;
-  font-style: normal;
-  font-variation-settings:"wdth" 103.8;
-  font-size: 82px; 
-}
-
-.home-main-word:not(.invert){
-  text-shadow: 
-  -2px -2px 0 #fff,
-  2px -2px 0 #fff,
-  -2px 2px 0 #fff,
-  2px 2px 0 #fff,
-  0 -3px 0 #fff,
-  0 3px 0 #fff,
-  -3px 0 0 #fff,
-  3px 0 0 #fff;
-  display: inline-block;
-}
-
-.invert {
-  top:41%;
-  height:fit-content;
-  display: inline-block;
-  transform: rotateX(180deg);
-  background: linear-gradient(180deg, rgba(102, 102, 102, 0.26) 0.01%, rgba(53, 53, 53, 0.54) 48.5%, rgba(0, 0, 0, 0.7) 100%);
-  -webkit-background-clip: text;  
-  background-clip: text; 
-  -webkit-text-fill-color: transparent; 
-  color: transparent; 
-}
-
-.countdown{
-  position: absolute;
-  top:80%;
-  left:50%;
-  transform:translate(-50%,-65%);
-  height:24vh;
-  width:41vw;
-  background-color:rgba(11, 74, 25, 1);
-  border-radius: 10px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.counttime{
-  color:#fff;
-  font-family: "Fredoka", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 541;
-  font-style: normal;
-  font-variation-settings:"wdth" 103.8;
-  font-size:4.5vw;
-  margin:0;
-}
-
-.seeu{
-  color:#fff;
-  font-family: "Fredoka", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 541;
-  font-style: normal;
-  font-variation-settings:"wdth" 103.8;
-  font-size: 2.35vw;
-  padding:0;
-  margin:0;
-}
-
-.labels{
-  color:#fff;
-  font-family: "Fredoka", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 541;
-  font-style: normal;
-  font-variation-settings:"wdth" 103.8;
-  font-size: 1.75vw;
-  padding:0;
-  margin:0;
-}
-/*---------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-/*-----------------------------------------------------Responsiveness----------------------------------------------*/
-
-
-@media screen and (max-width: 1400px) {
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+.sponsors{
+    height:100vh;
+    width:100vw;
+   background: linear-gradient(180deg, #78A653 0%, #1FB966 100%); 
+    position:absolute;
+    top:100vh;
+    font-family: "Fredoka", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"wdth" 103.8;
+    text-align: center;
+    overflow:hidden;
+    z-index:0;
+  }
+  
+  .wording{
+    position:absolute;
+    left:27vw;
+    font-size: 3vw;
+    color:rgba(16, 93, 15, 1);
+    font-weight: 1000;
+  }
+  
+  /* .wording::after{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:max-content;
+    z-index: 1;
+    content:'Special';
+    font-size: 39px;
+    font-weight: 350;
+    color: rgba(255, 255, 255, 1);
+  
+  } */
+  
+   .hand_img{
+    width:7vw;
+    height:4.5vw;
+    position: inherit;
+  } 
+  
+  .sponsors-name{
+    width: 10%;
+    height: 66px;
+    background: rgba(217, 217, 217, 1);
+    position: inherit;
+  }
+  
+  .sp1{
+    top:20%;
+    left:15%;
+  }
+  
+  .sp3{
+    top:20%;
+    left:65%;
+  }
+  
+  .sp2{
+    top:43%;
+    left:2%;
+  }
+  
+  .sp4{
+    top:43%;
+    left:83%;
+  }
+  
+  .info{
+    position:absolute;
+    width: 80%;
+    height: 80%;
+    top:33%;
+    left:8%;
+    border:2px solid red;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgba(253, 255, 247, 0.28);
+    border: 2px solid rgba(255, 255, 255, 1);
+  }
+  
+  .infowrap{
+    width:69%;
+    height:75%;
+  }
+  
+  .info>.infowrap>p{
+    flex-wrap: wrap;
+    font-size: 2.75vw;
+    color:rgba(9, 47, 13, 1);
+    font-weight:600;
+  }
+  
+  @media screen and (max-width: 1400px) {
   .nav-button {
     font-size:25px;
     margin: 10px;
@@ -386,4 +281,490 @@ body{
 
 
 
- 
+ /* @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+.root{
+  --primary:#107D07;
+}
+
+body{ 
+  margin:0;
+  padding:0;
+  height:100% !important;
+  width:100vw;
+  box-sizing:border-box;  
+  background-image: url("https://s3-alpha-sig.figma.com/img/3eb2/671a/2e9dc248e54f8b71b366dddf20fbe136?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kjnGxQHu8EELIv96SxzwduwKFkRu00Vy1-Nc-DJ1PO44P9KMHr-6gw6PnFf6YUJ86iIDSem5Rrr0B086uIppoHca8FMah5RytWufhDyUeYKS6jLtkFvt42QbFgHxDNqBRdMCDX0OufM2LkKFfYeT2rdWRqAfKVbhPqLLlo7YQTi15ppvSKHrPAmFISlsdIYAPCvj9hoL67YkHZ3SDi-Nu6p-xZavjiWI0OpyrVTPI~WO07Qj~LK5g2-GarddLKNWyZVydRGstemUmV2VjWDOqyV-QMH-pB~jQ0PqUZwWzBRbVIkcgTo3DgvTQLiABTBommWGEIZWlhSUfDy72cM3Zw__");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/*----------------------------------------Home Page CSS stlying----------------------------------------------------*/
+.body{
+  width: 100vw;
+  height:100vh;
+  gap: 0px;
+  opacity: 0px;
+  position:relative;
+}
+
+.nav-bar{
+  position:fixed;
+  top:0;
+  height:15vh;
+  width:100vw;
+  display:flex;
+  flex-direction: row;
+  justify-content: end;
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 10px 8px #00000040;
+  z-index:10;
+}
+
+.nav-logo{
+  width:125px;
+  height:125px;
+  left:20px;
+  position: fixed;
+}
+
+.nav-button{
+  color:#107D07; 
+  font-family: "Fredoka", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 541;
+  font-style: normal;
+  font-variation-settings:"wdth" 103.8;
+  font-size:27px;
+  margin:20px;
+  border:none;
+  background-color: transparent;
+}
+
+.nav-button:hover{
+  font-size: 27px;
+  color:#000;
+}
+
+.nav-button.active {
+  color: black; 
+}
+
+.ham{
+  display:none;
+}
+
+.home{
+  position:absolute;
+  top:35%;
+  left:50%;
+  transform: translate(-50%,-30%);
+  height:70vh;
+  width:100vw;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home-word {
+  flex:none;
+  height: 23vh;
+  width: 70vw;
+  padding: 20px;
+  border: 2px solid grey;
+  border-radius: 20px;
+  background-color: transparent;
+  backdrop-filter: blur(9px);
+  position: relative;
+}
+
+.home-main-word{
+  position: absolute;
+  top:10%;
+  left:8%;
+  font-family: "Fredoka", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 541;
+  font-style: normal;
+  font-variation-settings:"wdth" 103.8;
+  font-size: 82px; 
+}
+
+.home-main-word:not(.invert){
+  text-shadow: 
+  -2px -2px 0 #fff,
+  2px -2px 0 #fff,
+  -2px 2px 0 #fff,
+  2px 2px 0 #fff,
+  0 -3px 0 #fff,
+  0 3px 0 #fff,
+  -3px 0 0 #fff,
+  3px 0 0 #fff;
+  display: inline-block;
+}
+
+.invert {
+  top:41%;
+  height:fit-content;
+  display: inline-block;
+  transform: rotateX(180deg);
+  background: linear-gradient(180deg, rgba(102, 102, 102, 0.26) 0.01%, rgba(53, 53, 53, 0.54) 48.5%, rgba(0, 0, 0, 0.7) 100%);
+  -webkit-background-clip: text;  
+  background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  color: transparent; 
+}
+
+.countdown{
+  position: absolute;
+  top:80%;
+  left:50%;
+  transform:translate(-50%,-65%);
+  height:23vh;
+  width:40vw;
+  background-color:rgba(11, 74, 25, 1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.counttime{
+  color:#fff;
+  font-family: "Fredoka", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 541;
+  font-style: normal;
+  font-variation-settings:"wdth" 103.8;
+  font-size:4.5vw;
+  margin:0;
+}
+
+.seeu{
+  color:#fff;
+  font-family: "Fredoka", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 541;
+  font-style: normal;
+  font-variation-settings:"wdth" 103.8;
+  font-size: 2.35vw;
+  padding:0;
+  margin:0;
+}
+
+.labels{
+  color:#fff;
+  font-family: "Fredoka", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 541;
+  font-style: normal;
+  font-variation-settings:"wdth" 103.8;
+  font-size: 1.75vw;
+  padding:0;
+  margin:0;
+}
+/*---------------------------------------------------------------------------------------------------------------------
+
+
+
+/*------------------------------Sponsors Page CSS styling-------------------------------------------------------------*/
+
+.sponsors{
+  height:100vh;
+  width:100vw;
+  background: linear-gradient(180deg, #78A653 0%, #1FB966 100%);
+  position:absolute;
+  top:100vh;
+  font-family: "Fredoka", system-ui;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:"wdth" 103.8;
+  text-align: center;
+  overflow:hidden;
+  z-index:0;
+}
+
+.wording{
+  position:absolute;
+  left:27vw;
+  font-size: 3vw;
+  color:rgba(16, 93, 15, 1);
+  z-index:100;
+  font-weight: 1000;
+}
+
+/* .wording::after{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:max-content;
+  z-index: 1;
+  content:'Special';
+  font-size: 39px;
+  font-weight: 350;
+  color: rgba(255, 255, 255, 1);
+
+} */
+
+ .hand_img{
+  width:7vw;
+  height:4.5vw;
+  position: inherit;
+} 
+
+.sponsors-name{
+  width: 10%;
+  height: 66px;
+  background: rgba(217, 217, 217, 1);
+  position: inherit;
+}
+
+.sp1{
+  top:20%;
+  left:15%;
+}
+
+.sp3{
+  top:20%;
+  left:65%;
+}
+
+.sp2{
+  top:43%;
+  left:2%;
+}
+
+.sp4{
+  top:43%;
+  left:83%;
+}
+
+.info{
+  position:absolute;
+  width: 80%;
+  height: 80%;
+  top:33%;
+  left:8%;
+  border:2px solid red;
+  border-radius: 50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: rgba(253, 255, 247, 0.28);
+  border: 2px solid rgba(255, 255, 255, 1);
+}
+
+.infowrap{
+  width:69%;
+  height:75%;
+}
+
+.info>.infowrap>p{
+  flex-wrap: wrap;
+  font-size: 2.75vw;
+  color:rgba(9, 47, 13, 1);
+  font-weight:600;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------Responsiveness----------------------------------------------*/
+
+
+@media screen and (max-width: 1400px) {
+  .nav-button {
+    font-size:25px;
+    margin: 10px;
+  }
+
+  .home-word {
+    height:18vh;
+    width: 65vw; 
+  }
+
+  .home-main-word {
+    font-size:5vw; 
+  }
+
+  .invert{
+    top:38%;
+  }
+  .seeu{
+    font-size: 3.5vw;
+  }
+  .counttime{
+    font-size: 5.8vw;
+  }
+  .labels{
+    font-size: 2.5vw;
+  }
+  .countdown{
+    top:86%;
+    height:20vw;
+  }
+  .info>.infowrap>p{
+    font-size:2.95vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .nav-button{
+    font-size:20px;
+    margin: 10px;
+  }
+  
+  .closed{
+    display:block;
+    height:10px;
+    width:10px;
+  }
+
+  .countdown{
+    top:75%;
+  }
+
+  .nav-button:not(.app){
+    position:absolute;
+    right:0;
+    display:none;
+  }
+
+  .app{
+    display:block;
+    position: absolute;
+    left:43%;
+    top:30%;
+    font-size: 5vw;
+  }
+
+  .home-word {
+    height:18vh;
+    width:100vw; 
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    border:none;
+  }
+
+  .home-main-word {
+    font-size: 8vw; 
+  }
+
+  .invert
+  {
+    top:38%;
+  }
+
+  .wording
+  {
+    font-size: 4.5vw;
+    left:20vw;
+  }
+  .info>.infowrap>p{
+    font-size: 3.95vw;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+
+  .nav-button{
+    font-size:20px;
+    margin: 10px;
+  }
+  
+  .closed{
+    display:block;
+    position: absolute;
+    right:80px;
+    top:35px;
+    height:45px;
+    width:45px;
+    background-color: transparent;
+    border:none;
+  }
+
+  .closed:hover{
+    height:50px;
+    width:50px;
+  }
+  .open{
+    display:none;
+  }
+
+  .countdown{
+    top:65%;
+  }
+
+  .ho{
+    position:absolute;
+    right:20px;
+    top:15px;
+  }
+
+  .ab{
+    position:absolute;
+    right:0;
+    display:none;
+  }
+  .sp{
+    position:absolute;
+    right:0;
+    display:none;
+  }
+  .spo{
+    position:absolute;
+    right:0;
+    display:none;
+  }
+  .faq{
+    position:absolute;
+    right:0;
+    display:none;
+  }
+
+
+  .app{
+    display:block;
+    position: absolute;
+    left:43%;
+    top:30%;
+    font-size: 5vw;
+  }
+
+  .home-word {
+    height:18vh;
+    width:100vw; 
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    border:none;
+  }
+
+  .home-main-word {
+    font-size: 8vw; 
+  }
+
+  .invert
+  {
+    top:29%;
+  }
+
+  .wording
+  {
+    font-size: 4.5vw;
+    left:20vw;
+  }
+
+  .info>.infowrap>p{
+    font-size: 5vw;
+  }
+}
+
+
+
+

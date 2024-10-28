@@ -1,20 +1,25 @@
-
 import './App.css';
 import About from './About.js'
 import Speakers from './Speakers.js';
 import NavBar from './components/Header';
 import HomeSym from './components/homesym';
 import Countdown from './components/countdown';
+import Sponsors from './components/sponsors';
+import FAQ from './components/faq'
 
 
 function App() {
   const target = new Date(2024,12,11);
   return (
-    <body className="body">\
+    <body >
       <Speakers/>
       <NavBar></NavBar>
-      <HomeSym></HomeSym>
-      <Countdown targetDate={target}></Countdown>
+      <div className="body">
+        <HomeSym></HomeSym>
+        <Countdown targetDate={target}></Countdown>
+      </div>
+      <Sponsors></Sponsors>
+      <FAQ></FAQ>
     </body>
   );
 }
