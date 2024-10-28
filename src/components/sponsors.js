@@ -1,4 +1,4 @@
-import '../App.css';
+import '../sponsors.css';
 
 export default function Sponsors(){
     return (

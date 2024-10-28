@@ -57,6 +57,8 @@ export default function NavBar() {
             >
                 Apply
             </button>
+            <button className="ham closed" onClick={()=>scrollToSection('.sponsors','.spo')}><img src="images/Ham State=Default.png" alt="hamimage" style={{height:"40px",width:"50px"}}></img></button>
+            <button className="ham open"><img src="images/Ham State=Pressed.png" alt="hamimage" style={{height:"40px",width:"50px"}}></img></button>
         </header>
     );
 };
