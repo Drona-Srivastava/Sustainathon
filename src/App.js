@@ -1,9 +1,11 @@
 import './App.css';
-import './sponsors.css'
+import './sponsors.css';
+import './faq.css';
 import NavBar from './components/Header';
 import HomeSym from './components/homesym';
 import Countdown from './components/countdown';
 import Sponsors from './components/sponsors';
+import FAQ from './components/faq'
 
 function App() {
   const target = new Date(2024,12,11);
@@ -17,6 +19,7 @@ function App() {
         <Countdown targetDate={target}></Countdown>
       </div>
       <Sponsors></Sponsors>
+      <FAQ></FAQ>
     </body>
   );
 }
