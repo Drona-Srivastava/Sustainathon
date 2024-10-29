@@ -1,7 +1,12 @@
-body{
-    background: linear-gradient(180deg, #43755A 0%, #1FB966 100%);
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+.speakers{
+    position:absolute;
+    top:300vh;
+    height:100vh;
+    width:100vw;
+    /* background: linear-gradient(180deg, #43755A 0%, #1FB966 100%); */
+    background:#5cb25d;
     background-size: cover; 
-    height: 100vh;
 }
 .chat-container {
     display: flex;
@@ -9,6 +14,9 @@ body{
     justify-content: center;
     position: relative;
     margin: 50px;
+    animation:appear linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 40%;
   }
   .chat-container2 {
     display: flex;
@@ -17,34 +25,42 @@ body{
     justify-content: center;
     position: relative;
     margin: 50px;
+    animation:appear-right linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 40%;
   }
   
   .profile-picture img {
     border-radius: 50%; 
     border: 5px solid #4ade80;  /* Green border */
-    width: 189px;
-  height: 175px;
-  top: 186px;
-  left: 174px;
-  gap: 0px;
-  border: 5px 0px 0px 0px;
-  opacity: 0px;
+    width: 10vw;
+    height: 10vw;
+    top: 186px;
+    left: 10%;
+    gap: 0px;
+    border: 5px 0px 0px 0px;
+    opacity: 0px;
     margin-top: 10px;
     margin-left: 100px;
-    
+    animation:appear linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 40%;
   }
+
   .profile-picture2 img {
     border-radius: 50%; 
     border: 5px solid #4ade80;  /* Green border */
-    width: 189px;
-  height: 175px;
-  top: 186px;
-  left: 174px;
-  gap: 0px;
-  border: 5px 0px 0px 0px;
-  opacity: 0px;
+    width: 10vw;
+    height: 10vw;
+    top: 186px;
+    left: 10%;
+    gap: 0px;
+    border: 5px 0px 0px 0px;
+    opacity: 0px;
     margin-right: 100px;
-    
+    animation:appear-right linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 40%;
   }
   
   /* Arrow styling using pseudo-elements */
@@ -104,6 +120,29 @@ body{
     justify-content: center;
     margin-left: 10px;
     width: 630px;
-
-
   }
+
+  @keyframes appear{
+    from{
+        opacity:0;
+        transform:translateX(-490px);
+        view:none;
+    }
+    to{
+        opacity:1;
+        transform: translateX(0px);
+    
+    }
+}
+
+@keyframes appear-right{
+  from{
+      opacity:0;
+      transform:translateX(500px);
+      view:none;
+  }
+  to{
+      opacity:1;
+      transform: translateX(0px);
+  }
+}

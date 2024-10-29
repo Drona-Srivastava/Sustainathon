@@ -1,28 +1,74 @@
-.questions{
-    top:200vh;
+ .faqs{
+    top:400vh;
     position:absolute;
     padding: 0;
     margin:0;
-    height:100vh;
+    height:115vh;
+    background:#5cb25d;
     width:100vw;
     display:flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    gap:10px;
     z-index:0;
+  }
+
+  .faqs>span{
+    color:#107D07;
+    font-size: 3.5vw;
+    font-family: "Fredoka", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 541;
+    font-style: normal;
+    font-variation-settings:"wdth" 103.8;
   }
   
   .accordion {
-    background-color: #eee;
-    color: #444;
+    background-color:#b8c0b7;
+    color:#107D07;
     cursor: pointer;
     padding: 18px;
-    width: 100%;
-    text-align: left;
+    font-size: 2vw;
+    font-family: "Fredoka", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 541;
+    font-style: normal;
+    font-variation-settings:"wdth" 103.8;
+    width: 70vw;
+    text-align:left;
     border: none;
     outline: none;
     transition: 0.4s;
+    margin:10px;
+    border-radius: 20px;
+    box-shadow: 5px 10px rgb(173, 165, 165);
+    animation:appear linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 40%;
   }
+  
+  @keyframes appear{
+      from{
+          opacity:0;
+          transform:translateX(-50%);
+          view:none;
+      }
+      to{
+          opacity:1;
+          transform: translateX(0);
+      
+      }
+  }
+
+
+
+.accordion::before {
+  content: "*";
+  color: #107D07;
+  font-size:2vw;
+  margin-right: 10px;
+}
   
   
   .active, .accordion:hover {
@@ -31,7 +77,36 @@
 
   .panel {
     padding: 0 18px;
-    background-color: white;
+    background-color:aliceblue;
+    backdrop-filter:blur(10px);
+    color: #107D07;
     display: none;
     overflow: hidden;
+    font-family: "Fredoka", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 541;
+    font-style: normal;
+    font-variation-settings:"wdth" 103.8;
+    width: 70vw;
+    border-radius: 20px;
   }
+
+  .panel>p{
+    font-size: 2vw;
+  }
+
+  @media screen and (max-width: 700px) {
+    .faqs>span{
+      font-size: 7vw;
+    }
+    .accordion{
+      font-size: 4.5vw;
+    }
+    .accordion::before{
+      font-size: 3.5vw;
+    }
+    .panel>p{
+      font-size:4vw;
+    }
+  } 
+

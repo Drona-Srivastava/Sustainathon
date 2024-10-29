@@ -8,31 +8,23 @@ body{
   margin:0;
   padding:0;
   height:100%;
-  width:100%;
+  width:100vw;
+  background-image: url("https://s3-alpha-sig.figma.com/img/3eb2/671a/2e9dc248e54f8b71b366dddf20fbe136?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kjnGxQHu8EELIv96SxzwduwKFkRu00Vy1-Nc-DJ1PO44P9KMHr-6gw6PnFf6YUJ86iIDSem5Rrr0B086uIppoHca8FMah5RytWufhDyUeYKS6jLtkFvt42QbFgHxDNqBRdMCDX0OufM2LkKFfYeT2rdWRqAfKVbhPqLLlo7YQTi15ppvSKHrPAmFISlsdIYAPCvj9hoL67YkHZ3SDi-Nu6p-xZavjiWI0OpyrVTPI~WO07Qj~LK5g2-GarddLKNWyZVydRGstemUmV2VjWDOqyV-QMH-pB~jQ0PqUZwWzBRbVIkcgTo3DgvTQLiABTBommWGEIZWlhSUfDy72cM3Zw__");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .base{ 
   margin:0;
   padding:0;
-  height:300vh;
+  height:100vh;
   width:100vw;
   box-sizing:border-box;  
-  background-image: url("https://s3-alpha-sig.figma.com/img/3eb2/671a/2e9dc248e54f8b71b366dddf20fbe136?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kjnGxQHu8EELIv96SxzwduwKFkRu00Vy1-Nc-DJ1PO44P9KMHr-6gw6PnFf6YUJ86iIDSem5Rrr0B086uIppoHca8FMah5RytWufhDyUeYKS6jLtkFvt42QbFgHxDNqBRdMCDX0OufM2LkKFfYeT2rdWRqAfKVbhPqLLlo7YQTi15ppvSKHrPAmFISlsdIYAPCvj9hoL67YkHZ3SDi-Nu6p-xZavjiWI0OpyrVTPI~WO07Qj~LK5g2-GarddLKNWyZVydRGstemUmV2VjWDOqyV-QMH-pB~jQ0PqUZwWzBRbVIkcgTo3DgvTQLiABTBommWGEIZWlhSUfDy72cM3Zw__");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position:fixed;
-  z-index:-1000;
 }
 
 /*----------------------------------------Home Page CSS stlying----------------------------------------------------*/
-.body{
-  width: 100vw;
-  height:100vh;
-  gap: 0px;
-  opacity: 0px;
-  position:relative;
-}
 
 .nav-bar{
   position:fixed;
@@ -47,8 +39,8 @@ body{
   z-index:10;
 }
 
-.nav-logo{
-  width:4.5vw;
+.main-logo{
+  width:7.5vw;
   aspect-ratio: 1;
   left:20px;
   position: fixed;
@@ -74,11 +66,45 @@ body{
 
 .nav-button.active {
   color: black; 
+  background-color: transparent;
 }
 
 .ham{
   display:none;
 }
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px; 
+  right: 10px;
+  background-color:rgba(161, 194, 136, 0.71);
+  backdrop-filter: blur(20px);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.dropdown-menu button {
+  background: none;
+  border: none;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  font-family: "Fredoka", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 541;
+  font-style: normal;
+  font-variation-settings:"wdth" 103.8;
+  font-size: 16px;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+}
+
 
 .home{
   position:absolute;
@@ -299,6 +325,10 @@ body{
   .nav-button{
     font-size:20px;
     margin: 10px;
+  }
+
+  .main-logo{
+    width:24vw;
   }
   
   .closed{
