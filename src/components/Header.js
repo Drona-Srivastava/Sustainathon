@@ -1,9 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import "../App.css";
 
 export default function NavBar() {
     const [activeButton, setActiveButton] = useState(null);
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Track dropdown visibility
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+    // Memoize sectionSelectors to avoid dependency warnings
+    const sectionSelectors = useMemo(() => ({
+        '.ho': '.home',
+        '.ab': '.about',
+        '.tr': '.tracks',
+        '.spo': '.sponsor',
+        '.sp': '.speakers',
+        '.faq': '.faqs',
+        '.app': '.apply'
+    }), []);
 
     const scrollToSection = (selector, sel1) => {
         setActiveButton(sel1);
@@ -11,12 +22,40 @@ export default function NavBar() {
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
-        setIsDropdownOpen(false); // Close dropdown after scrolling to section
+        setIsDropdownOpen(false);
     };
 
     const toggleDropdown = () => {
-        setIsDropdownOpen(!isDropdownOpen); // Toggle dropdown visibility
+        setIsDropdownOpen(!isDropdownOpen);
     };
+
+    const handleScroll = useCallback(() => {
+        const scrollPosition = window.scrollY;
+
+        // Determine the active section based on scroll position
+        let currentSection = null;
+        Object.entries(sectionSelectors).forEach(([key, selector]) => {
+            const element = document.querySelector(selector);
+            if (element) {
+                const offsetTop = element.offsetTop;
+                const offsetHeight = element.offsetHeight;
+                if (scrollPosition >= offsetTop - 50 && scrollPosition < offsetTop + offsetHeight - 50) {
+                    currentSection = key;
+                }
+            }
+        });
+
+        if (currentSection) {
+            setActiveButton(currentSection);
+        }
+    }, [sectionSelectors]);
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [handleScroll]);
 
     return (
         <header className="nav-bar">
@@ -40,16 +79,16 @@ export default function NavBar() {
                 Tracks
             </button>
             <button
-                className={`nav-button sp ${activeButton === '.sp' ? 'active' : ''}`}
-                onClick={() => scrollToSection('.speakers', '.sp')}
-            >
-                Speakers
-            </button>
-            <button
                 className={`nav-button spo ${activeButton === '.spo' ? 'active' : ''}`}
                 onClick={() => scrollToSection('.sponsor', '.spo')}
             >
                 Sponsors
+            </button>
+            <button
+                className={`nav-button sp ${activeButton === '.sp' ? 'active' : ''}`}
+                onClick={() => scrollToSection('.speakers', '.sp')}
+            >
+                Speakers
             </button>
             <button
                 className={`nav-button faq ${activeButton === '.faq' ? 'active' : ''}`}
@@ -63,12 +102,12 @@ export default function NavBar() {
             >
                 Apply
             </button>
-            
+
             {/* Hamburger button to toggle dropdown */}
             <button className="ham closed" onClick={toggleDropdown}>
-                <img src={isDropdownOpen?"images/Ham-State=Pressed.png":"images/Ham-State=Default.png"} alt="hamimage" style={{ height: "40px", width: "50px" }} />
+                <img src={isDropdownOpen ? "images/Ham-State=Pressed.png" : "images/Ham-State=Default.png"} alt="hamimage" style={{ height: "40px", width: "50px" }} />
             </button>
-            
+
             {/* Dropdown menu */}
             {isDropdownOpen && (
                 <div className="dropdown-menu">

@@ -4,7 +4,7 @@ function Speakers()
 {
     return(
         <div className="speakers">
-            <div className="chat-container">
+            <div className="chat-container cont1">
             <div className="profile-picture">
                  <img src={icon} alt="Profile" />
                </div>

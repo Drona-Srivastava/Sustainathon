@@ -16,11 +16,7 @@ export default function Sponsors(){
                 <div className="infowrap">
                     <p className="content">Lorem ipsum odor amet, consectetuer
                          adipiscing elit. Aliquam turpis leo interdum 
-                        mattis lectus vitae platea. Quam primis maximus
-                         sagittis sem phasellus porttitor.
-                         Donec etiam ultricies curabitur eros ac torquent ac?
-                        Lacinia eu facilisi netus dolor
-                         per consectetur pellentesque efficitur. </p>
+                        mattis lectus vitae platea. Quam primis  </p>
                 </div>
             </div>
         </div>
