@@ -9,8 +9,9 @@ export default function FAQ(){
   };
 
   return (
-    <div className="questions">
-      {['Section 1', 'Section 2', 'Section 3'].map((section, index) => (
+    <div className="faqs">
+      <span><i>FAQ's</i></span>
+      {['Question 1', 'Question 2', 'Question 3'].map((section, index) => (
         <div key={index}>
           <button 
             className={`accordion ${activeIndex === index ? 'active' : ''}`} 
@@ -30,23 +31,3 @@ export default function FAQ(){
 };
 
 
-// export default function FAQ(){
-//     return(
-//     <div className="questions">
-//         <button className="accordion">Section 1</button>
-//         <div className="panel">
-//           <p>Lorem ipsum...</p>
-//         </div>
-
-//         <button className="accordion">Section 2</button>
-//         <div className="panel">
-//           <p>Lorem ipsum...</p>
-//         </div>
-
-//         <button className="accordion">Section 3</button>
-//         <div className="panel">
-//           <p>Lorem ipsum...</p>
-//         </div>
-//     </div>
-//     )
-// }

@@ -11,13 +11,14 @@ import FAQ from './components/faq'
 function App() {
   const target = new Date(2024,12,11);
   return (
-    <body >
-      <Speakers/>
+    <body>
       <NavBar></NavBar>
-      <div className="body">
+      <div className="base">
         <HomeSym></HomeSym>
         <Countdown targetDate={target}></Countdown>
       </div>
+      <About></About>
+      <Speakers></Speakers>
       <Sponsors></Sponsors>
       <FAQ></FAQ>
     </body>
