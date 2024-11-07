@@ -1,0 +1,282 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #4caf50;
+    }
+
+    .circle-container {
+      overflow: hidden;
+      position: static;
+      width: 400px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+
+
+    
+
+
+
+    /* Background circles */
+    .blur-circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);  /* Subtle white */
+      /* filter: blur(20px);  Blur effect */
+      z-index: -1;      /* Behind the content */
+    }
+    .border-1{
+        position: absolute;
+        border-radius: 50%;
+
+        width: 750px;
+        height: 750px;
+        z-index: -1;
+    }
+    .border-2{
+        position: absolute;
+        border-radius: 50%;
+
+        width: 600px;
+        height: 600px;
+        z-index: -1;
+
+    }
+    .border-3{
+        position: absolute;
+        border-radius: 50%;
+
+        width: 400px;
+        height: 400px;
+        z-index: -1;
+
+    }
+
+    .blur-circle-1 {
+
+      width: 740px;
+      height: 740px;
+      
+      
+    }
+
+    .blur-circle-2 {
+
+      width: 550px;
+      height: 550px;
+      filter: blur(4px);
+      
+    }
+    
+
+    .blur-circle-3 {
+
+      width: 350px;
+      height: 350px;
+      filter: blur(2px);
+      
+    }
+
+    /* Central content circle */
+    .center-circle {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: #8BC34A;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1; /* Keep on top */
+    }
+
+   .tracks {
+      font-weight: bold;
+      font-size: 24px;
+      color: black;
+    }
+    .white-circle1{
+        z-index: 4;
+        position: absolute;
+        background-color: red;
+        border-radius: 50%;
+
+    }
+    .circle1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      padding: 10px;
+      width: 350px; /* Size of orbit path */
+      height: 350px;
+   /* Counter-rotate to keep text static */
+      color: white;
+      text-align: center;
+      font-size: 0.9rem;
+      border: 2px solid rgba(255, 255, 255, 0.5); /* White border with opacity */
+      border-radius: 50%; /* Make it a perfect circle */
+      transform-origin: center;
+      animation: rotateOrbitred 10s linear infinite; /* Rotates the red circle */
+  }
+  .circle2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    width: 550px; /* Size of orbit path */
+    height: 550px;
+ /* Counter-rotate to keep text static */
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateOrbitgreen 15s linear infinite; /* Rotates the red circle */
+}
+.circle3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 10px;
+  width: 740px; /* Size of orbit path */
+  height: 740px;
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotateOrbityellow 20s linear infinite; /* Rotates the red circle */
+}
+
+  .circle1 img{
+      position: absolute;
+      top: -15px; /* Position it on the orbit */
+      left: 50%;
+      width: 100px;
+      height: 100px;
+      margin: -15px;
+      transform: rotate(-720deg); 
+      color: white;
+      text-align: center;
+      font-size: 0.9rem;
+      background-color: white;
+      border-radius: 50%;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.9rem;
+      animation: rotateOrbitredimg 10s linear infinite;
+
+
+
+  }
+  .circle2 img{
+    position: absolute;
+    top: -25px; /* Position it on the orbit */
+    left: 50%;
+    width: 110px;
+    height: 110px;
+    margin: -25px;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    background-color: white;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9rem;
+    animation: rotateOrbitgreenimg 15s linear infinite;
+
+
+}
+.circle3 img{
+  position: absolute;
+  top: -25px; /* Position it on the orbit */
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  margin: -15px;
+  transform: rotate(-360deg); 
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: white;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.9rem;
+  animation: rotateOrbityellowimg 20s linear infinite;
+
+
+}
+    @keyframes rotateOrbitred {
+      0% {
+          transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+          transform: translate(-50%, -50%) rotate(360deg);
+      }
+  }
+  @keyframes rotateOrbitgreen {
+    0% {
+        transform: translate(-50%, -50%) rotate(120deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(480deg);
+    }
+}
+@keyframes rotateOrbityellow {
+  0% {
+      transform: translate(-50%, -50%) rotate(240deg);
+  }
+  100% {
+      transform: translate(-50%, -50%) rotate(600deg);
+  }
+}
+@keyframes rotateOrbityellowimg {
+  0% {
+      transform: translate(0%, 0%) rotate(-240deg);
+  }
+  100% {
+      transform: translate(0%, 0%) rotate(-600deg);
+  }
+}
+@keyframes rotateOrbitredimg {
+  0% {
+      transform: translate(0%, 0%) rotate(360deg);
+  }
+  100% {
+      transform: translate(0%, 0%) rotate(0deg);
+  }
+}
+@keyframes rotateOrbitgreenimg {
+  0% {
+      transform: translate(0%, 0%) rotate(-120deg);
+  }
+  100% {
+      transform: translate(0%, 0%) rotate(-480deg);
+  }
+}
