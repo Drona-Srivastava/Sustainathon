@@ -1,14 +1,27 @@
- body{
-    background: linear-gradient(180deg, #43755A 0%, #1FB966 100%);
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+.speakers{
+    position:absolute;
+    top:300vh;
+    height:100vh;
+    width:100vw;
+    /* background: linear-gradient(180deg, #43755A 0%, #1FB966 100%); */
+    background: linear-gradient(180deg, #8ED179 0%, #5FC771 100%);
     background-size: cover; 
-    height: 100vh;
+}
+.cont1{
+  margin-top: 10px;
 }
 .chat-container {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin: 50px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    animation:appear linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 40%;
   }
   .chat-container2 {
     display: flex;
@@ -16,35 +29,43 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    margin: 50px;
+    margin: 30px;
+    animation:appear-right linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 40%;
   }
   
   .profile-picture img {
     border-radius: 50%; 
     border: 5px solid #4ade80;  /* Green border */
-    width: 189px;
-  height: 175px;
-  top: 186px;
-  left: 174px;
-  gap: 0px;
-  border: 5px 0px 0px 0px;
-  opacity: 0px;
+    width: 10vw;
+    height: 10vw;
+    top: 186px;
+    left: 10%;
+    gap: 0px;
+    border: 5px 0px 0px 0px;
+    opacity: 0px;
     margin-top: 10px;
     margin-left: 100px;
-    
+    animation:appear linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 40%;
   }
+
   .profile-picture2 img {
     border-radius: 50%; 
     border: 5px solid #4ade80;  /* Green border */
-    width: 189px;
-  height: 175px;
-  top: 186px;
-  left: 174px;
-  gap: 0px;
-  border: 5px 0px 0px 0px;
-  opacity: 0px;
+    width: 10vw;
+    height: 10vw;
+    top: 186px;
+    left: 10%;
+    gap: 0px;
+    border: 5px 0px 0px 0px;
+    opacity: 0px;
     margin-right: 100px;
-    
+    animation:appear-right linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 40%;
   }
   
   /* Arrow styling using pseudo-elements */
@@ -89,14 +110,14 @@
   /* Chat bubble styling */
   .chat-bubble {
     background: linear-gradient(135deg, rgba(72, 187, 120, 0.9), rgba(72, 187, 120, 0.7));
-    height: 136px;
-  top: 203px;
-  left: 545px;
-  gap: 0px;
-  border-radius: 40px;
-  border: 7px 0px 0px 0px;
-  opacity: 0px;
-  border: 7px solid #FFFFFF;
+    height: 116px;
+    top: 203px;
+    left: 545px;
+    gap: 0px;
+    border-radius: 40px;
+    border: 7px 0px 0px 0px;
+    opacity: 0px;
+    border: 7px solid #FFFFFF;
     color: white;
     flex-grow: 1;
     display: flex;
@@ -104,6 +125,29 @@
     justify-content: center;
     margin-left: 10px;
     width: 630px;
-
-
   }
+
+  @keyframes appear{
+    from{
+        opacity:0;
+        transform:translateX(-490px);
+        view:none;
+    }
+    to{
+        opacity:1;
+        transform: translateX(0px);
+    
+    }
+}
+
+@keyframes appear-right{
+  from{
+      opacity:0;
+      transform:translateX(500px);
+      view:none;
+  }
+  to{
+      opacity:1;
+      transform: translateX(0px);
+  }
+}
