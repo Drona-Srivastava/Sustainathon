@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 .sponsor{
     position:absolute;
-    top:200vh;
+    top:300vh;
     height:100vh;
     width:100vw;
     background: linear-gradient(180deg, #BFDC81 0%, #8ED179 100%);

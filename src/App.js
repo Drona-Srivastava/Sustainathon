@@ -6,6 +6,7 @@ import HomeSym from './components/homesym';
 import Countdown from './components/countdown';
 import Sponsors from './components/sponsors';
 import FAQ from './components/faq'
+import Tracks from './tracks.js';
 
 
 function App() {
@@ -18,9 +19,11 @@ function App() {
         <Countdown targetDate={target}></Countdown>
       </div>
       <About></About>
+      <Tracks></Tracks>
       <Speakers></Speakers>
       <Sponsors></Sponsors>
       <FAQ></FAQ>
+      
     </body>
   );
 }

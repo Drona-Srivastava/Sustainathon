@@ -9,10 +9,17 @@ body{
   padding:0;
   height:100%;
   width:100vw;
-  background-image: url("https://s3-alpha-sig.figma.com/img/3eb2/671a/2e9dc248e54f8b71b366dddf20fbe136?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kjnGxQHu8EELIv96SxzwduwKFkRu00Vy1-Nc-DJ1PO44P9KMHr-6gw6PnFf6YUJ86iIDSem5Rrr0B086uIppoHca8FMah5RytWufhDyUeYKS6jLtkFvt42QbFgHxDNqBRdMCDX0OufM2LkKFfYeT2rdWRqAfKVbhPqLLlo7YQTi15ppvSKHrPAmFISlsdIYAPCvj9hoL67YkHZ3SDi-Nu6p-xZavjiWI0OpyrVTPI~WO07Qj~LK5g2-GarddLKNWyZVydRGstemUmV2VjWDOqyV-QMH-pB~jQ0PqUZwWzBRbVIkcgTo3DgvTQLiABTBommWGEIZWlhSUfDy72cM3Zw__");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("./sustainbg.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   overflow-x: hidden;
 }
 

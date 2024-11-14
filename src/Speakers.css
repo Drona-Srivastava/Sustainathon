@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 .speakers{
     position:absolute;
-    top:300vh;
+    top:400vh;
     height:100vh;
     width:100vw;
     /* background: linear-gradient(180deg, #43755A 0%, #1FB966 100%); */
     background: linear-gradient(180deg, #8ED179 0%, #5FC771 100%);
     background-size: cover; 
+    z-index: 1;
 }
 .cont1{
   margin-top: 10px;
