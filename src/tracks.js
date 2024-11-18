@@ -5,7 +5,7 @@ import track3 from './track3-removebg-preview.png'
 function Tracks()
 {
     return(
-        <>
+  <div className="tracks1">
        
         <div className="circle-container">
             
@@ -26,16 +26,16 @@ function Tracks()
       </div>
 
       <div className="circle1">
-        <img src = {track2}></img>
+        <img src = {track2} alt="img2"></img>
        
         </div>
         <div className="circle2">
-       <img src = {track1}></img>
+       <img src = {track1} alt="img1"></img>
         </div>
         <div className="circle3">
-       <img src = {track3}></img>
+       <img src = {track3} alt="img3"></img>
         </div>
-      </>
+  </div>
     
     );
 }

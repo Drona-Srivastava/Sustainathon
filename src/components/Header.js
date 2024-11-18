@@ -9,7 +9,7 @@ export default function NavBar() {
     const sectionSelectors = useMemo(() => ({
         '.ho': '.home',
         '.ab': '.about',
-        '.tr': '.tracks',
+        '.tr': '.tracks1',
         '.spo': '.sponsor',
         '.sp': '.speakers',
         '.faq': '.faqs',
@@ -20,7 +20,7 @@ export default function NavBar() {
         setActiveButton(sel1);
         const element = document.querySelector(selector);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            element.scrollIntoView({ behavior: 'smooth', block:'center' });
         }
         setIsDropdownOpen(false);
     };

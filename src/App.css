@@ -10,9 +10,17 @@ body{
   height:100%;
   width:100vw;
   background-image: url(./susbgfinal.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("./sustainbg.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   overflow-x: hidden;
 }
 
